@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>StatusCI Example Page</title>
+    <link rel="stylesheet" href="./statusci.css"/>
+    <script type="text/javascript" src="./statusci.js"></script>
+</head>
+
+<body>
+<h1>StatusCI Example Page</h1>
+
+<server id="default" url="http://localhost:49001" username="admin" password="admin"></server>
+<table width="100%">
+    <tr>
+        <td>
+            <jenkins_job server="default" name="Test"></jenkins_job>
+        </td>
+        <td>
+            <jenkins_job server="default" name="Test2"></jenkins_job>
+        </td>
+    </tr>
+</table>
+
+
+<div style="width: 30%">
+    <div class="status status-error building">
+        <h3><a href="#">MyJob</a></h3>
+        <progress value="30" max="100"></progress>
+    </div>
+
+    <div class="status status-warn building">
+        <h3><a href="#">MyJob2</a></h3>
+        <progress value="10" max="100"></progress>
+    </div>
+
+    <div class="status status-success building">
+        <h3><a href="#">MyJob3</a></h3>
+        <progress value="70" max="100"></progress>
+    </div>
+</div>
+
+
+</body>
+
+
+</html>
