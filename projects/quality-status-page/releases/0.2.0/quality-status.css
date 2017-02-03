@@ -1,0 +1,175 @@
+body, table {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color: black;
+    background: white;
+}
+
+.status {
+
+    min-width: 30px;
+    height: 3em;
+    border: 3px solid black;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 1px;
+}
+
+.status-error {
+    background-color: #FF0000;
+    border-color: #800000;
+}
+
+.status-warn {
+    background-color: #FFFF00;
+    border-color: #808000;
+}
+
+.status-success {
+    background-color: #00FF00;
+    border-color: #008000;
+}
+
+.status-none {
+    background-color: #c0c0c0;
+    border-color: #808080;
+}
+
+
+.building.status-success {
+    animation: building-success 2s infinite;
+}
+
+.building.status-warn {
+    animation: building-warn 2s infinite;
+}
+
+.building.status-error {
+    animation: building-error 2s infinite;
+}
+
+.building.status-none {
+    animation: building-none 2s infinite;
+}
+
+.error {
+    background-color: #ffdff9;
+}
+
+.loading {
+    border-color: #000000;
+}
+
+.status h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+.status a, .status a:visited, .status a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.status a:hover {
+    text-decoration: underline;
+}
+
+
+@keyframes building-success {
+    0% {
+        background-color: #00FF00;
+    }
+    50% {
+        background-color: #FFFFFF;
+    }
+    100% {
+        background-color: #00FF00;
+    }
+}
+
+@keyframes building-error {
+    0% {
+        background-color: #FF0000;
+    }
+    50% {
+        background-color: #FFFFFF;
+    }
+    100% {
+        background-color: #FF0000;
+    }
+}
+
+@keyframes building-warn {
+    0% {
+        background-color: #FFFF00;
+    }
+    50% {
+        background-color: #FFFFFF;
+    }
+    100% {
+        background-color: #FFFF00;
+    }
+}
+
+@keyframes building-none {
+    0% {
+        background-color: #c0c0c0;
+    }
+    50% {
+        background-color: #FFFFFF;
+    }
+    100% {
+        background-color: #c0c0c0;
+    }
+}
+
+
+/* item has been updated recently */
+.age-0 {
+    opacity: 1;
+}
+
+.age-1 {
+    opacity: 0.85;
+}
+
+.age-2 {
+    opacity: 0.7;
+}
+
+.age-3 {
+    opacity: 0.55;
+}
+
+.age-4 {
+    opacity: 0.4;
+}
+
+/* item has been updated a while ago */
+.age-5 {
+    opacity: 0.25;
+}
+
+
+.status progress {
+    display: inline;
+    height: 0.5em;
+    margin: 2px 10px 0 10px;
+}
+
+/* Simple layout for grouping status boxes */
+.layout-group {
+
+    width: 300px;
+    float: left;
+    margin: 5px;
+
+}
+
+.layout-group h2, .layout-group h3 {
+    text-align: center;
+}
